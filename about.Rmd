@@ -1,9 +1,16 @@
 ---
-title: "About Me"
+title: "My Experience"
 ---
 
-### About this site
+# 🎓 Education
+- **Columbia University – MPH in Biostatistics, Certificate: CEOR**  
+  *2024 – 2026, New York, NY*  
+  Coursework: Data Science, Large Scale Data Analysis, Mathematical Statistics, etc.
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+# 💼 Professional Experience
+- **Pfizer China – Marketing Analyst Intern**  
+  - Analyzed national leukemia and multiple myeloma market data (hospital coverage, KOL activity, prescribing patterns) to identify high-value hospitals and inform targeting strategy for brands such as Besponsa, Blincyto, and Elra.
+  - Built Excel-based dashboards to track product performance and competitive landscape across Top40 / Top200 / Top500 hospitals, and presented insights to marketing leadership to support Q3 business planning.
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+# 🧠 Skills
+R | Python | SQL | SAS | STATA
