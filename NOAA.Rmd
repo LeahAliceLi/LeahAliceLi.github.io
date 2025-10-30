@@ -12,7 +12,7 @@ output:
 runtime: shiny
 ---
 
-```{r setup, warning=FALSE,message=FALSE}
+```{r setup, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(plotly)
 library(p8105.datasets)
@@ -26,17 +26,17 @@ noaa_df = ny_noaa |>
     year = as.numeric(substr(date, 1, 4)),
     month = as.numeric(substr(date, 6, 7)),
     tmax=as.numeric(tmax),
-    prcp = prcp / 10   # convert to mm
+    prcp = prcp / 10
   ) |> 
   filter(year >= 2010) |> 
-  sample_n(100)  # sample for speed
+  sample_n(100) 
 ```
 
 ---
 
-##  Temperature Trends
+##  Temperature
 
-### Average Monthly Maximum Temperature by Station (Line Plot)
+### Line Plot for Average Monthly Maximum Temperature by Station
 ```{r, echo=FALSE,message=FALSE,warning=FALSE}
 avg_temp = noaa_df |>
   group_by(id, year, month) |>
@@ -60,10 +60,10 @@ plot_ly(
 
 ---
 
-## ️ Precipitation Patterns
+## ️ Precipitation
 
-### Distribution of Precipitation by Month (Box Plot)
-```{r, echo=FALSE,message=FALSE,warning=FALSE}
+### BoxPlot for Distribution of Precipitation by Month
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 plot_ly(
   data = noaa_df,
   x = ~factor(month),
@@ -81,9 +81,9 @@ plot_ly(
 
 ---
 
-##  Snowfall Summary
+##  Snowfall
 
-### Average Annual Snowfall by Station (Bar Chart)
+### Bar Chart for Average Annual Snowfall by Station 
 ```{r, echo=FALSE,message=FALSE,warning=FALSE}
 snow_summary = noaa_df |>
   group_by(year, id) |>
@@ -106,10 +106,3 @@ plot_ly(
 
 ---
 
-## Notes
-- Dataset: `p8105.datasets::ny_noaa`
-- Interactive visualizations made with **Plotly**:
-  - Line plot: Temperature trends by station and month
-  - Box plot: Precipitation variation across months
-  - Bar chart: Annual snowfall averages
-- All units converted for readability (°C, mm).
